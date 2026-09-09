@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FantaAstaLab — Auction Engine V0.3</title>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FantaAstaLab — Auction Engine V0.4.1</title>
 <style>
 :root{--bg:#0b0f14;--panel:#121821;--panel2:#171f2a;--line:#263140;--ink:#f4f7fb;--muted:#95a2b5;--green:#31c48d;--red:#ff6b6b;--blue:#63a4ff;--shadow:0 18px 50px rgba(0,0,0,.26)}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:22px 18px;border-right:1px solid var(--line);background:linear-gradient(180deg,#0e141c,#0b0f14);overflow:auto}.brand{display:flex;align-items:center;gap:10px;margin-bottom:22px}.brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#2f80ed,#31c48d)}.brand h1{font-size:17px;margin:0}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.side-title{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.11em;text-transform:uppercase;margin:20px 0 9px}.field{display:grid;gap:6px;margin-bottom:10px}.field label{font-size:11px;color:var(--muted);font-weight:700}.field input,.field select{width:100%;height:38px;border:1px solid var(--line);border-radius:11px;background:var(--panel2);color:var(--ink);padding:0 10px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.budget-row{display:grid;grid-template-columns:32px 1fr 52px;align-items:center;gap:7px;margin-bottom:7px}.budget-row span{font-size:11px;font-weight:800;color:var(--muted)}.budget-row input[type=number]{height:32px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--ink);text-align:center}.budget-sum{font-size:11px;margin-top:6px;color:var(--muted)}.budget-sum.bad{color:var(--red)}.btn{height:38px;border:1px solid var(--line);border-radius:11px;background:var(--panel2);color:var(--ink);padding:0 12px;font-weight:750}.btn.primary{background:#f4f7fb;color:#0b0f14;border-color:#f4f7fb}.btn.danger{color:#ff8585}.main{padding:22px 24px 34px;min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}.topbar h2{margin:0;font-size:24px}.topbar p{margin:4px 0 0;color:var(--muted);font-size:12px}.status-chip{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:11px;color:var(--muted)}.kpis{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:10px;margin-bottom:14px}.kpi{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:13px 14px}.kpi .lab{font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase}.kpi .val{font-size:24px;font-weight:900;margin-top:5px}.kpi .sub{font-size:10px;color:var(--muted);margin-top:3px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-head h3{font-size:13px;margin:0}.panel-head small{color:var(--muted);font-size:10px}.filters{display:flex;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line)}.search{flex:1;height:36px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);padding:0 10px}.role-filter{display:flex;gap:5px}.role-filter button{height:32px;min-width:34px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--muted);font-weight:800}.role-filter button.active{background:#263447;color:#fff}.table-wrap{max-height:calc(100vh - 260px);overflow:auto}table{width:100%;border-collapse:collapse}thead th{position:sticky;top:0;z-index:2;background:#151d27;color:var(--muted);font-size:9px;text-transform:uppercase;text-align:right;padding:9px 10px;border-bottom:1px solid var(--line)}thead th:first-child,tbody td:first-child{text-align:left}tbody tr{border-bottom:1px solid rgba(38,49,64,.72)}tbody tr:hover{background:#17212d}tbody tr.selected{background:#1a2634}tbody tr.sold{opacity:.45}tbody td{padding:9px 10px;font-size:11px;text-align:right;white-space:nowrap}.player-cell{display:flex;align-items:center;gap:8px;min-width:180px}.role-dot{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:10px;font-weight:900;border:1px solid var(--line);background:#1d2733}.role-P{color:#e7d15e}.role-D{color:#66c3ff}.role-C{color:#7be495}.role-A{color:#ff8b8b}.player-name{font-weight:800;font-size:12px}.player-team{font-size:9px;color:var(--muted);margin-top:2px}.metric{font-weight:900}.market{color:var(--blue)}.mymax{color:var(--green)}.badge{padding:4px 7px;border-radius:999px;font-size:9px;font-weight:800}.sold-badge{background:#2a2023;color:#ff9a9a}.free-badge{background:#18251f;color:#68dba5}.auction{padding:14px}.empty{padding:40px 18px;text-align:center;color:var(--muted);font-size:12px}.auction-card{display:grid;gap:12px}.auction-player{display:flex;align-items:center;gap:10px}.auction-player .role-dot{width:38px;height:38px;border-radius:11px}.auction-player h4{margin:0;font-size:17px}.auction-player p{margin:3px 0 0;color:var(--muted);font-size:10px}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price-box{border:1px solid var(--line);background:var(--panel2);border-radius:12px;padding:10px;text-align:center}.price-box span{display:block;font-size:9px;color:var(--muted);font-weight:800}.price-box strong{display:block;font-size:21px;margin-top:4px}.price-box.market strong{color:var(--blue)}.price-box.max strong{color:var(--green)}.explain{border:1px solid var(--line);border-radius:12px;padding:10px;background:#111923;font-size:10px;color:var(--muted);line-height:1.45}.auction-form{display:grid;gap:9px}.auction-form label{font-size:10px;color:var(--muted);font-weight:800}.auction-form input,.auction-form select{height:38px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);padding:0 10px;width:100%}.league-panel{margin-top:14px}.mine{color:var(--green);font-weight:850}.footer-note{margin-top:12px;color:var(--muted);font-size:10px}@media(max-width:1100px){.app{grid-template-columns:250px 1fr}.workspace{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(3,1fr)}}
 
@@ -9,191 +9,384 @@
     .engine-line{display:flex;justify-content:space-between;gap:10px;margin-top:5px;padding-top:5px;border-top:1px solid rgba(38,49,64,.75)}
     .engine-line b{color:var(--ink)}
     input:focus{border-color:#55708f!important;box-shadow:0 0 0 3px rgba(99,164,255,.10)}
-</style></head><body><div class="app"><aside class="sidebar"><div class="brand"><div class="brand-mark"></div><div><h1>FANTAASTALAB</h1><small>Auction Engine · V0.3</small></div></div><div class="side-title">Configurazione lega</div><div class="field"><label>Nome squadra</label><input id="myTeamName"></div><div class="row2"><div class="field"><label>Crediti</label><input id="credits" type="number" min="50" step="50"></div><div class="field"><label>Squadre</label><input id="teams" type="number" min="4" max="20"></div></div><div class="side-title">Composizione rosa</div><div class="row4"><div class="field"><label>P</label><input id="slotsP" type="number" min="0"></div><div class="field"><label>D</label><input id="slotsD" type="number" min="0"></div><div class="field"><label>C</label><input id="slotsC" type="number" min="0"></div><div class="field"><label>A</label><input id="slotsA" type="number" min="0"></div></div><div class="field"><label>Offerta minima</label><input id="minBid" type="number" min="1"></div><div class="side-title">Budget per ruolo</div><div class="budget-row"><span>P</span><input id="bpR" type="range" min="1" max="80"><input id="bpN" type="number" min="1" max="80"></div><div class="budget-row"><span>D</span><input id="bdR" type="range" min="1" max="80"><input id="bdN" type="number" min="1" max="80"></div><div class="budget-row"><span>C</span><input id="bcR" type="range" min="1" max="80"><input id="bcN" type="number" min="1" max="80"></div><div class="budget-row"><span>A</span><input id="baR" type="range" min="1" max="80"><input id="baN" type="number" min="1" max="80"></div><div class="budget-sum" id="budgetSum"></div><div class="side-title">Sessione</div><button class="btn" id="undoBtn" style="width:100%;margin-bottom:8px">↶ Annulla ultimo acquisto</button><button class="btn danger" id="resetBtn" style="width:100%">Reset asta</button></aside><main class="main"><div class="topbar"><div><h2>Auction Engine</h2><p>VALUE → MARKET PRICE → MY MAX · motore dinamico d'asta.</p></div><div class="status-chip" id="statusChip">LIVE · 0 acquisti</div></div><section class="kpis"><div class="kpi"><div class="lab">Budget iniziale</div><div class="val" id="kBudget">—</div><div class="sub">crediti</div></div><div class="kpi"><div class="lab">Budget residuo</div><div class="val" id="kRemaining">—</div><div class="sub">mia squadra</div></div><div class="kpi"><div class="lab">Speso</div><div class="val" id="kSpent">—</div><div class="sub">mia squadra</div></div><div class="kpi"><div class="lab">Giocatori</div><div class="val" id="kPlayers">—</div><div class="sub">rosa</div></div><div class="kpi"><div class="lab">Budget / slot</div><div class="val" id="kPerSlot">—</div><div class="sub">slot liberi</div></div></section><div class="workspace"><section class="panel"><div class="panel-head"><div><h3>Listone demo</h3><small>clicca un giocatore per aprire l'asta</small></div><small id="resultCount"></small></div><div class="filters"><input class="search" id="search" placeholder="Cerca giocatore o squadra…"><div class="role-filter" id="roleFilter"><button class="active" data-role="ALL">TUTTI</button><button data-role="P">P</button><button data-role="D">D</button><button data-role="C">C</button><button data-role="A">A</button></div></div><div class="table-wrap"><table><thead><tr><th>Giocatore</th><th>R</th><th>VALUE</th><th>MARKET</th><th>MY MAX</th><th>Stato</th></tr></thead><tbody id="playersBody"></tbody></table></div></section><aside><section class="panel"><div class="panel-head"><h3>Asta Live</h3><small>V0.3</small></div><div id="auctionPanel" class="auction"></div></section><section class="panel league-panel"><div class="panel-head"><h3>Budget lega</h3><small>live</small></div><div class="table-wrap" style="max-height:310px"><table><thead><tr><th>Squadra</th><th>Budget</th><th>Gioc.</th></tr></thead><tbody id="leagueBody"></tbody></table></div></section></aside></div><div class="footer-note">V0.3 usa dati demo ma un motore d’asta dinamico: gli acquisti modificano MARKET e MY MAX. VALUE resta tecnico e stabile.</div></main></div>
+
+.phase-select{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.phase-select button{height:34px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--muted);font-weight:900}
+.phase-select button.active{background:#263447;color:#fff;border-color:#4b6380}
+.budget-credit-row{display:grid;grid-template-columns:30px 1fr 56px;align-items:center;gap:8px;margin-bottom:7px}
+.budget-credit-row>span:first-child{font-size:11px;font-weight:900;color:var(--muted)}
+.budget-credit-row input{height:34px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--ink);padding:0 9px;text-align:right;width:100%}
+.budget-credit-row .pct{font-size:10px;color:var(--muted);text-align:right}
+.team-editor{display:grid;gap:6px}
+.team-name-row{display:grid;grid-template-columns:38px 1fr;gap:7px;align-items:center}
+.team-name-row .team-tag{font-size:9px;color:var(--muted);font-weight:900;text-align:center}
+.team-name-row:first-child .team-tag{color:var(--green)}
+.team-name-row input{height:34px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--ink);padding:0 9px;width:100%}
+.allocation-panel{margin-top:14px}
+.allocation-grid{padding:10px 12px}
+.allocation-head,.allocation-row{display:grid;grid-template-columns:42px 1fr 1fr 48px;gap:8px;align-items:center}
+.allocation-head{font-size:8px;color:var(--muted);font-weight:900;text-transform:uppercase;padding:0 3px 7px}
+.allocation-row{padding:8px 3px;border-top:1px solid rgba(38,49,64,.7);font-size:10px}
+.allocation-row strong{font-size:11px}
+.allocation-row .dyn{color:var(--green);font-weight:900}
+.allocation-row.closed{opacity:.48}
+.allocation-row .neg{color:var(--red)}
+.allocation-row .pos{color:var(--green)}
+.sidebar-note{font-size:9px;line-height:1.4;color:var(--muted);margin-top:6px}
+
+</style></head><body><div class="app"><aside class="sidebar"><div class="brand"><div class="brand-mark"></div><div><h1>FANTAASTALAB</h1><small>Auction Engine · V0.4.1</small></div></div><div class="side-title">Configurazione lega</div>
+<div class="row2">
+  <div class="field"><label>Crediti</label><input id="credits" type="number" min="50" step="50"></div>
+  <div class="field"><label>Squadre</label><input id="teams" type="number" min="4" max="20"></div>
+</div>
+<div class="field"><label>Offerta minima</label><input id="minBid" type="number" min="1"></div>
+
+<div class="side-title">Composizione rosa</div>
+<div class="row4">
+  <div class="field"><label>P</label><input id="slotsP" type="number" min="0"></div>
+  <div class="field"><label>D</label><input id="slotsD" type="number" min="0"></div>
+  <div class="field"><label>C</label><input id="slotsC" type="number" min="0"></div>
+  <div class="field"><label>A</label><input id="slotsA" type="number" min="0"></div>
+</div>
+
+<div class="side-title">Fase asta</div>
+<div class="phase-select" id="phaseSelect">
+  <button data-phase="P">P</button>
+  <button data-phase="D">D</button>
+  <button data-phase="C">C</button>
+  <button data-phase="A">A</button>
+</div>
+<div class="sidebar-note">Ordine P → D → C → A. I reparti già chiusi non ricevono più budget.</div>
+
+<div class="side-title">Ripartizione budget</div>
+<div class="budget-credit-row"><span>P</span><input id="budgetP" type="number" min="0"><span class="pct" id="pctP">—</span></div>
+<div class="budget-credit-row"><span>D</span><input id="budgetD" type="number" min="0"><span class="pct" id="pctD">—</span></div>
+<div class="budget-credit-row"><span>C</span><input id="budgetC" type="number" min="0"><span class="pct" id="pctC">—</span></div>
+<div class="budget-credit-row"><span>A</span><input id="budgetA" type="number" min="0"><span class="pct" id="pctA">—</span></div>
+<div class="budget-sum" id="budgetSum"></div>
+<div class="sidebar-note">Scrivi direttamente i crediti. Le percentuali vengono ricavate automaticamente.</div>
+
+<div class="side-title">Nomi squadre</div>
+<div class="team-editor" id="teamNamesEditor"></div>
+
+<div class="side-title">Sessione</div><button class="btn" id="undoBtn" style="width:100%;margin-bottom:8px">↶ Annulla ultimo acquisto</button><button class="btn danger" id="resetBtn" style="width:100%">Reset asta</button></aside><main class="main"><div class="topbar"><div><h2>Auction Engine</h2><p>Budget globale · asta sequenziale P → D → C → A · ricalcolo continuo.</p></div><div class="status-chip" id="statusChip">LIVE · 0 acquisti</div></div><section class="kpis"><div class="kpi"><div class="lab">Budget iniziale</div><div class="val" id="kBudget">—</div><div class="sub">crediti</div></div><div class="kpi"><div class="lab">Budget residuo</div><div class="val" id="kRemaining">—</div><div class="sub">mia squadra</div></div><div class="kpi"><div class="lab">Speso</div><div class="val" id="kSpent">—</div><div class="sub">mia squadra</div></div><div class="kpi"><div class="lab">Giocatori</div><div class="val" id="kPlayers">—</div><div class="sub">rosa</div></div><div class="kpi"><div class="lab">Budget / slot</div><div class="val" id="kPerSlot">—</div><div class="sub">slot liberi</div></div></section><div class="workspace"><section class="panel"><div class="panel-head"><div><h3>Listone demo</h3><small>clicca un giocatore per aprire l'asta</small></div><small id="resultCount"></small></div><div class="filters"><input class="search" id="search" placeholder="Cerca giocatore o squadra…"><div class="role-filter" id="roleFilter"><button class="active" data-role="ALL">TUTTI</button><button data-role="P">P</button><button data-role="D">D</button><button data-role="C">C</button><button data-role="A">A</button></div></div><div class="table-wrap"><table><thead><tr><th>Giocatore</th><th>R</th><th>VALUE</th><th>MARKET</th><th>MY MAX</th><th>Stato</th></tr></thead><tbody id="playersBody"></tbody></table></div></section><aside><section class="panel"><div class="panel-head"><h3>Asta Live</h3><small>V0.3</small></div><div id="auctionPanel" class="auction"></div></section><section class="panel league-panel"><div class="panel-head"><h3>Budget lega</h3><small>live</small></div><div class="table-wrap" style="max-height:310px"><table><thead><tr><th>Squadra</th><th>Budget</th><th>Gioc.</th></tr></thead><tbody id="leagueBody"></tbody></table></div></section>
+<section class="panel allocation-panel">
+  <div class="panel-head"><h3>Budget dinamico</h3><small id="phaseLabel">fase P</small></div>
+  <div class="allocation-grid">
+    <div class="allocation-head"><span>Ruolo</span><span>Piano residuo</span><span>Dinamico</span><span>Δ</span></div>
+    <div id="allocationRows"></div>
+  </div>
+</section></aside></div><div class="footer-note">V0.4.1: budget globale e asta sequenziale. Ogni acquisto ridistribuisce MY MAX su tutti i reparti ancora aperti.</div></main></div>
 <script>
 const P=[
 [1,'A. Leone','Milano','P',88,.98,.72,0,.10],[2,'M. Serra','Torino','P',81,.96,.64,0,.08],[3,'L. Romano','Roma','P',73,.91,.58,0,.16],[4,'D. Bianchi','Bergamo','P',62,.86,.50,0,.14],
 [5,'F. Riva','Milano','D',91,.97,.82,.22,.09],[6,'N. Greco','Napoli','D',86,.94,.77,.18,.13],[7,'E. Conti','Roma','D',80,.93,.72,.12,.10],[8,'G. Costa','Torino','D',73,.88,.65,.08,.18],[9,'S. Moretti','Firenze','D',68,.90,.60,.06,.14],[10,'P. Villa','Bologna','D',61,.83,.56,.04,.20],
 [11,'L. Neri','Milano','C',95,.97,.90,.76,.08],[12,'M. De Luca','Bergamo','C',89,.96,.87,.58,.11],[13,'R. Fontana','Napoli','C',84,.94,.81,.42,.12],[14,'A. Ferri','Roma','C',78,.91,.75,.38,.16],[15,'T. Sala','Firenze','C',70,.88,.69,.25,.10],[16,'C. Gallo','Bologna','C',65,.84,.63,.20,.18],
 [17,'M. Rinaldi','Milano','A',98,.98,.95,.90,.07],[18,'D. Vitale','Napoli','A',94,.97,.92,.82,.10],[19,'S. Ricci','Bergamo','A',90,.96,.88,.70,.12],[20,'A. Lombardi','Roma','A',85,.93,.84,.62,.14],[21,'F. Marino','Torino','A',79,.91,.79,.50,.18],[22,'G. Parisi','Firenze','A',74,.89,.75,.45,.15],[23,'L. Caruso','Bologna','A',68,.85,.70,.38,.22],[24,'P. Bellini','Como','A',62,.82,.66,.30,.19]
-].map(x=>({id:x[0],name:x[1],team:x[2],role:x[3],base:x[4],starter:x[5],upside:x[6],setPiece:x[7],risk:x[8]}))
+].map(x=>({id:x[0],name:x[1],team:x[2],role:x[3],base:x[4],starter:x[5],upside:x[6],setPiece:x[7],risk:x[8]}));
 
-const DEF={myTeamName:'MEI FC',credits:500,teams:10,minBid:1,slots:{P:3,D:8,C:8,A:6},budget:{P:6,D:13,C:26,A:55},purchases:[]};
+const ROLES=['P','D','C','A'];
 const SLOT_WEIGHTS={
   P:[.72,.18,.10],
   D:[.34,.19,.14,.10,.08,.06,.05,.04],
   C:[.31,.22,.16,.11,.08,.05,.04,.03],
   A:[.42,.24,.14,.09,.06,.05]
 };
+const DEF={
+  credits:500,teams:10,minBid:1,phase:'P',
+  slots:{P:3,D:8,C:8,A:6},
+  budget:{P:30,D:65,C:130,A:275},
+  teamNames:['MEI FC','Team 2','Team 3','Team 4','Team 5','Team 6','Team 7','Team 8','Team 9','Team 10'],
+  purchases:[]
+};
 let S=load(),sel=null,role='ALL',q='';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function phaseIndex(r){return ROLES.indexOf(r)}
+function openRole(r){return phaseIndex(r)>=phaseIndex(S.phase)}
 
+function ensureTeamNames(target=S){
+  if(!Array.isArray(target.teamNames)) target.teamNames=[];
+  while(target.teamNames.length<target.teams) target.teamNames.push(`Team ${target.teamNames.length+1}`);
+  target.teamNames=target.teamNames.slice(0,target.teams).map((n,i)=>String(n||`Team ${i+1}`));
+}
 function load(){
   try{
-    const x=JSON.parse(localStorage.getItem('fantaastalab-v03')||'{}');
-    return {...structuredClone(DEF),...x,slots:{...DEF.slots,...(x.slots||{})},budget:{...DEF.budget,...(x.budget||{})},purchases:Array.isArray(x.purchases)?x.purchases:[]};
-  }catch(_){return structuredClone(DEF)}
+    const x=JSON.parse(localStorage.getItem('fantaastalab-v041')||'{}');
+    const s={...clone(DEF),...x,slots:{...DEF.slots,...(x.slots||{})},budget:{...DEF.budget,...(x.budget||{})},purchases:Array.isArray(x.purchases)?x.purchases:[]};
+    s.teamNames=Array.isArray(x.teamNames)?x.teamNames.slice():clone(DEF.teamNames);
+    ensureTeamNames(s);
+    return s;
+  }catch(_){return clone(DEF)}
 }
-function save(){localStorage.setItem('fantaastalab-v03',JSON.stringify(S))}
-function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
-function rnd(v){return Math.max(1,Math.round(v))}
-function teams(){return Array.from({length:S.teams},(_,i)=>i?`Team ${i+1}`:S.myTeamName)}
+function save(){localStorage.setItem('fantaastalab-v041',JSON.stringify(S))}
+function teamIds(){return Array.from({length:S.teams},(_,i)=>i)}
+function teamName(id){return S.teamNames[id]||`Team ${id+1}`}
 function pur(id){return S.purchases.find(p=>p.playerId===id)}
-function tp(t){return S.purchases.filter(p=>p.buyer===t)}
-function spent(t){return tp(t).reduce((a,b)=>a+Number(b.price||0),0)}
-function rem(t){return Math.max(0,S.credits-spent(t))}
+function tp(id){return S.purchases.filter(p=>Number(p.buyerId)===Number(id))}
+function spent(id){return tp(id).reduce((a,b)=>a+Number(b.price||0),0)}
+function rem(id){return Math.max(0,S.credits-spent(id))}
 function slotsTotal(){return Object.values(S.slots).reduce((a,b)=>a+Number(b),0)}
-function roleCount(t,r){return tp(t).filter(a=>P.find(x=>x.id===a.playerId)?.role===r).length}
-function roleSlots(t,r){return Math.max(0,S.slots[r]-roleCount(t,r))}
-function allSlots(t){return Math.max(0,slotsTotal()-tp(t).length)}
-function roleSpent(t,r){return tp(t).filter(a=>P.find(x=>x.id===a.playerId)?.role===r).reduce((a,b)=>a+Number(b.price||0),0)}
+function roleCount(id,r){return tp(id).filter(a=>P.find(x=>x.id===a.playerId)?.role===r).length}
+function roleSlots(id,r){return Math.max(0,Number(S.slots[r]||0)-roleCount(id,r))}
+function auctionSlots(id){return ROLES.filter(openRole).reduce((a,r)=>a+roleSlots(id,r),0)}
+
 function val(p){return clamp(p.base*.48+p.starter*100*.20+p.upside*100*.18+p.setPiece*100*.08-p.risk*100*.06,1,100)}
 function cap(r){return {P:.085,D:.115,C:.165,A:.235}[r]}
 function scarce(r){return clamp((1+(S.teams-10)*.018)*(.94+(S.slots[r]/({P:3,D:8,C:8,A:6}[r]))*.06),.82,1.24)}
-function budgetShare(r){const sum=Object.values(S.budget).reduce((a,b)=>a+Number(b),0)||100;return Number(S.budget[r]||0)/sum}
-function roleBudget(r){return S.credits*budgetShare(r)}
 
+function budgetInputTotal(){return ROLES.reduce((a,r)=>a+Math.max(0,Number(S.budget[r]||0)),0)}
+function planBudget(r){
+  const total=budgetInputTotal();
+  return total>0 ? S.credits*(Math.max(0,Number(S.budget[r]||0))/total) : S.credits/4;
+}
 function weightsFor(r){
   const n=Math.max(0,Number(S.slots[r]||0));
   if(!n)return [];
-  const base=[...(SLOT_WEIGHTS[r]||[])];
-  while(base.length<n) base.push(Math.max(.015,(base.at(-1)||.05)*.72));
-  const a=base.slice(0,n),sum=a.reduce((x,y)=>x+y,0)||1;
-  return a.map(x=>x/sum);
+  const a=[...(SLOT_WEIGHTS[r]||[])];
+  while(a.length<n)a.push(Math.max(.015,(a.at(-1)||.05)*.72));
+  const cut=a.slice(0,n),sum=cut.reduce((x,y)=>x+y,0)||1;
+  return cut.map(x=>x/sum);
 }
-function expectedRoleSpent(t,r){
-  const w=weightsFor(r),filled=Math.min(roleCount(t,r),w.length);
-  return roleBudget(r)*w.slice(0,filled).reduce((a,b)=>a+b,0);
+function expectedRoleSpent(id,r){
+  const w=weightsFor(r),filled=Math.min(roleCount(id,r),w.length);
+  return planBudget(r)*w.slice(0,filled).reduce((a,b)=>a+b,0);
 }
-function roleHealth(t,r){
-  const filled=roleCount(t,r),total=Math.max(1,S.slots[r]);
-  if(filled===0)return 1;
-  const plannedRemain=Math.max(S.minBid*(total-filled),roleBudget(r)-expectedRoleSpent(t,r));
-  const actualRemain=Math.max(0,roleBudget(r)-roleSpent(t,r));
-  if(plannedRemain<=0)return actualRemain>0?1.15:.45;
-  return clamp(Math.pow(actualRemain/plannedRemain,.82),.28,1.22);
+function baselineRoleRemaining(id,r){
+  if(!openRole(r))return 0;
+  const rr=roleSlots(id,r);
+  if(rr<=0)return 0;
+  return Math.max(S.minBid*rr,planBudget(r)-expectedRoleSpent(id,r));
 }
-function savingsBank(t,exceptRole){
-  let bank=0;
-  for(const r of 'PDCA'){
-    if(r===exceptRole)continue;
-    const filled=roleCount(t,r);
-    if(!filled)continue;
-    bank+=Math.max(0,expectedRoleSpent(t,r)-roleSpent(t,r));
+
+function dynamicAllocations(id=0){
+  const out={P:0,D:0,C:0,A:0};
+  const roles=ROLES.filter(r=>openRole(r)&&roleSlots(id,r)>0);
+  if(!roles.length)return out;
+
+  const remaining=rem(id);
+  const slots=roles.reduce((a,r)=>a+roleSlots(id,r),0);
+  const mandatory=Math.min(remaining,S.minBid*slots);
+  const flexible=Math.max(0,remaining-mandatory);
+
+  const need={};
+  let needTotal=0;
+  for(const r of roles){
+    const roleMin=S.minBid*roleSlots(id,r);
+    need[r]=Math.max(0,baselineRoleRemaining(id,r)-roleMin);
+    needTotal+=need[r];
   }
-  return bank*.35;
+
+  for(const r of roles){
+    const reserveShare=slots ? mandatory*(roleSlots(id,r)/slots) : 0;
+    const flexShare=needTotal>0
+      ? flexible*(need[r]/needTotal)
+      : flexible*(roleSlots(id,r)/slots);
+    out[r]=Math.max(0,reserveShare+flexShare);
+  }
+  return out;
+}
+function budgetFactor(id,r){
+  const base=baselineRoleRemaining(id,r);
+  return base>0 ? clamp(dynamicAllocations(id)[r]/base,.08,1.75) : 0;
 }
 
 function baseMarket(p){
   const v=val(p)/100;
-  return rnd(S.credits*cap(p.role)*Math.pow(v,3.05)*(1+Math.max(0,v-.82)*1.2)*scarce(p.role));
+  return Math.max(1,Math.round(S.credits*cap(p.role)*Math.pow(v,3.05)*(1+Math.max(0,v-.82)*1.2)*scarce(p.role)));
 }
 function saleRatio(s){
-  const pl=P.find(x=>x.id===s.playerId);if(!pl)return 1;
+  const pl=P.find(x=>x.id===s.playerId);
+  if(!pl)return 1;
   const ref=Number(s.marketAtSale||s.baseAtSale||baseMarket(pl))||1;
   return clamp(Number(s.price||0)/ref,.35,2.2);
 }
 function avgRatio(sales){return sales.length?sales.reduce((a,s)=>a+saleRatio(s),0)/sales.length:1}
+function leagueAuctionSlots(){return teamIds().reduce((tot,id)=>tot+auctionSlots(id),0)}
 function liquidityPressure(){
-  const names=teams();
-  const initialPerSlot=S.credits/Math.max(1,slotsTotal());
-  const remainingCredits=names.reduce((a,t)=>a+rem(t),0);
-  const remainingSlots=names.reduce((a,t)=>a+allSlots(t),0);
-  if(!remainingSlots||!initialPerSlot)return 1;
-  const ratio=(remainingCredits/remainingSlots)/initialPerSlot;
-  return clamp(1+(ratio-1)*.16,.90,1.12);
+  const initial=S.credits/Math.max(1,slotsTotal());
+  const credits=teamIds().reduce((a,id)=>a+rem(id),0);
+  const slots=leagueAuctionSlots();
+  if(!slots||!initial)return 1;
+  return clamp(1+((credits/slots)/initial-1)*.14,.90,1.12);
 }
 function marketPressure(r){
   const all=S.purchases;
-  const rs=all.filter(s=>P.find(x=>x.id===s.playerId)?.role===r);
-  const rw=1-Math.exp(-rs.length/2.2),gw=1-Math.exp(-all.length/5);
-  const roleSignal=(avgRatio(rs)-1)*.62*rw;
-  const globalSignal=(avgRatio(all)-1)*.20*gw;
-  return clamp((1+roleSignal+globalSignal)*liquidityPressure(),.76,1.38);
+  const same=all.filter(s=>P.find(x=>x.id===s.playerId)?.role===r);
+  const rw=1-Math.exp(-same.length/2.2),gw=1-Math.exp(-all.length/5);
+  return clamp((1+(avgRatio(same)-1)*.58*rw+(avgRatio(all)-1)*.22*gw)*liquidityPressure(),.76,1.38);
 }
-function market(p){return rnd(baseMarket(p)*marketPressure(p.role))}
+function market(p){return Math.max(1,Math.round(baseMarket(p)*marketPressure(p.role)))}
 
 function baselineMyMax(p){
-  const m=Math.max(1,S.minBid),sr=slotsTotal(),rr=S.slots[p.role];
-  const hardTotal=Math.max(0,S.credits-m*Math.max(0,sr-1));
-  const hardRole=Math.max(0,roleBudget(p.role)-m*Math.max(0,rr-1));
-  return rnd(Math.min(baseMarket(p)*1.08,hardTotal,Math.max(m,hardRole)));
+  if(!openRole(p.role))return 0;
+  const rr=Math.max(1,Number(S.slots[p.role]||1));
+  return Math.max(S.minBid,Math.round(Math.min(baseMarket(p)*1.08,planBudget(p.role)-S.minBid*Math.max(0,rr-1))));
 }
 function mymax(p){
-  const t=S.myTeamName,m=Math.max(1,S.minBid),tr=rem(t),sr=allSlots(t),rr=roleSlots(t,p.role);
-  if(sr<=0||rr<=0)return 0;
-  const hardTotal=Math.max(0,tr-m*Math.max(0,sr-1));
-  const roleRemain=Math.max(0,roleBudget(p.role)-roleSpent(t,p.role));
-  const hardRole=Math.max(0,roleRemain-m*Math.max(0,rr-1));
-  const transfer=savingsBank(t,p.role);
-  const health=roleHealth(t,p.role);
-  const strategic=market(p)*1.08*health;
-  const roleCeiling=Math.max(m,hardRole+transfer);
-  return rnd(Math.min(strategic,hardTotal,roleCeiling));
+  if(!openRole(p.role)||roleSlots(0,p.role)<=0)return 0;
+  const openSlots=auctionSlots(0);
+  if(openSlots<=0)return 0;
+
+  const alloc=dynamicAllocations(0)[p.role];
+  const rr=roleSlots(0,p.role);
+  const hardRole=Math.max(0,alloc-S.minBid*Math.max(0,rr-1));
+  const hardTotal=Math.max(0,rem(0)-S.minBid*Math.max(0,openSlots-1));
+  const strategic=market(p)*1.08*Math.pow(budgetFactor(0,p.role),.88);
+  return Math.max(S.minBid,Math.round(Math.min(strategic,hardRole,hardTotal)));
 }
 function deltaHtml(now,base){
-  const d=Math.round(now-base);if(!d)return '<span class="delta flat">—</span>';
+  const d=Math.round(now-base);
+  if(!d)return '<span class="delta flat">—</span>';
   return `<span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span>`;
 }
-function updateBudgetSum(){let sum=Object.values(S.budget).reduce((a,b)=>a+Number(b),0);$('#budgetSum').textContent=`Totale ${sum}%`;$('#budgetSum').classList.toggle('bad',sum!==100)}
+
+function updateBudgetSum(){
+  const total=budgetInputTotal();
+  const diff=Math.round(total-S.credits);
+  $('#budgetSum').textContent=`Totale ${Math.round(total)} / ${S.credits} crediti${diff===0?'':` · ${diff>0?'+':''}${diff}`}`;
+  $('#budgetSum').classList.toggle('bad',Math.abs(diff)>.01);
+  for(const r of ROLES){
+    $('#pct'+r).textContent=`${(total>0?Number(S.budget[r]||0)/total*100:25).toFixed(1)}%`;
+  }
+}
+function safeAttr(s){return String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;')}
+function renderTeamEditors(){
+  ensureTeamNames();
+  $('#teamNamesEditor').innerHTML=teamIds().map(id=>`
+    <div class="team-name-row">
+      <div class="team-tag">${id===0?'MIA':id+1}</div>
+      <input data-team-id="${id}" value="${safeAttr(teamName(id))}">
+    </div>`).join('');
+  $$('#teamNamesEditor input').forEach(inp=>inp.onchange=e=>{
+    const id=Number(e.target.dataset.teamId);
+    S.teamNames[id]=e.target.value.trim()||`Team ${id+1}`;
+    e.target.value=S.teamNames[id];
+    save();renderDynamic();
+  });
+}
 function renderSettings(){
-  $('#myTeamName').value=S.myTeamName;$('#credits').value=S.credits;$('#teams').value=S.teams;$('#minBid').value=S.minBid;
-  for(const r of 'PDCA'){$('#slots'+r).value=S.slots[r];$('#b'+r.toLowerCase()+'R').value=S.budget[r];$('#b'+r.toLowerCase()+'N').value=S.budget[r]}
-  updateBudgetSum();
+  $('#credits').value=S.credits;$('#teams').value=S.teams;$('#minBid').value=S.minBid;
+  for(const r of ROLES){$('#slots'+r).value=S.slots[r];$('#budget'+r).value=S.budget[r]}
+  $$('#phaseSelect button').forEach(b=>b.classList.toggle('active',b.dataset.phase===S.phase));
+  updateBudgetSum();renderTeamEditors();
 }
 function renderK(){
-  const t=S.myTeamName,r=rem(t),sl=allSlots(t);
-  $('#kBudget').textContent=S.credits;$('#kRemaining').textContent=r;$('#kSpent').textContent=spent(t);
-  $('#kPlayers').textContent=`${tp(t).length} / ${slotsTotal()}`;$('#kPerSlot').textContent=sl?Math.floor(r/sl):0;
-  $('#statusChip').textContent=`LIVE · ${S.purchases.length} acquist${S.purchases.length===1?'o':'i'}`;
+  const remain=rem(0),slots=auctionSlots(0);
+  $('#kBudget').textContent=S.credits;
+  $('#kRemaining').textContent=remain;
+  $('#kSpent').textContent=spent(0);
+  $('#kPlayers').textContent=`${tp(0).length} / ${slotsTotal()}`;
+  $('#kPerSlot').textContent=slots?Math.floor(remain/slots):0;
+  $('#statusChip').textContent=`FASE ${S.phase} · ${S.purchases.length} acquist${S.purchases.length===1?'o':'i'}`;
 }
 function renderPlayers(){
-  let a=P.filter(p=>(role==='ALL'||p.role===role)&&(`${p.name} ${p.team}`.toLowerCase().includes(q.toLowerCase())))
+  let arr=P.filter(p=>(role==='ALL'||p.role===role)&&(`${p.name} ${p.team}`.toLowerCase().includes(q.toLowerCase())))
     .sort((a,b)=>mymax(b)-mymax(a)||market(b)-market(a));
-  $('#resultCount').textContent=`${a.length} giocatori`;
-  $('#playersBody').innerHTML=a.map(p=>{
-    const s=pur(p.id),mk=market(p),mm=mymax(p),bm=baseMarket(p),bmm=baselineMyMax(p);
-    return `<tr data-id="${p.id}" class="${sel===p.id?'selected':''} ${s?'sold':''}"><td><div class="player-cell"><div class="role-dot role-${p.role}">${p.role}</div><div><div class="player-name">${p.name}</div><div class="player-team">${p.team}</div></div></div></td><td>${p.role}</td><td class="metric">${val(p).toFixed(1)}</td><td class="metric market">${mk}${deltaHtml(mk,bm)}</td><td class="metric mymax">${s?'—':mm+(S.purchases.length?deltaHtml(mm,bmm):'')}</td><td>${s?`<span class="badge sold-badge">${s.buyer} · ${s.price}</span>`:'<span class="badge free-badge">LIBERO</span>'}</td></tr>`;
+  $('#resultCount').textContent=`${arr.length} giocatori`;
+  $('#playersBody').innerHTML=arr.map(p=>{
+    const sold=pur(p.id),mk=market(p),mm=mymax(p),closed=!openRole(p.role);
+    return `<tr data-id="${p.id}" class="${sel===p.id?'selected':''} ${sold?'sold':''}">
+      <td><div class="player-cell"><div class="role-dot role-${p.role}">${p.role}</div><div><div class="player-name">${p.name}</div><div class="player-team">${p.team}</div></div></div></td>
+      <td>${p.role}</td>
+      <td class="metric">${val(p).toFixed(1)}</td>
+      <td class="metric market">${mk}${S.purchases.length?deltaHtml(mk,baseMarket(p)):''}</td>
+      <td class="metric mymax">${sold||closed?'—':mm+(S.purchases.length?deltaHtml(mm,baselineMyMax(p)):'')}</td>
+      <td>${sold?`<span class="badge sold-badge">${teamName(sold.buyerId)} · ${sold.price}</span>`:closed?'<span class="badge sold-badge">CHIUSO</span>':'<span class="badge free-badge">LIBERO</span>'}</td>
+    </tr>`;
   }).join('');
   $$('#playersBody tr').forEach(tr=>tr.onclick=()=>{sel=+tr.dataset.id;renderPlayers();renderAuction()});
 }
 function renderAuction(){
-  const h=$('#auctionPanel');if(!sel){h.innerHTML='<div class="empty">Seleziona un giocatore dal listone.</div>';return}
-  const p=P.find(x=>x.id===sel),s=pur(sel);
-  if(s){h.innerHTML=`<div class="auction-card"><div class="auction-player"><div class="role-dot role-${p.role}">${p.role}</div><div><h4>${p.name}</h4><p>${p.team} · ${p.role}</p></div></div><div class="explain">Assegnato a <b>${s.buyer}</b> per <b>${s.price}</b> crediti.</div></div>`;return}
-  const mk=market(p),mm=mymax(p),press=marketPressure(p.role),health=roleHealth(S.myTeamName,p.role),rb=roleBudget(p.role),rr=Math.max(0,rb-roleSpent(S.myTeamName,p.role));
-  h.innerHTML=`<div class="auction-card"><div class="auction-player"><div class="role-dot role-${p.role}">${p.role}</div><div><h4>${p.name}</h4><p>${p.team} · ruolo ${p.role}</p></div></div><div class="price-grid"><div class="price-box"><span>VALUE</span><strong>${val(p).toFixed(1)}</strong></div><div class="price-box market"><span>MARKET</span><strong>${mk}</strong>${S.purchases.length?deltaHtml(mk,baseMarket(p)):''}</div><div class="price-box max"><span>MY MAX</span><strong>${mm}</strong>${S.purchases.length?deltaHtml(mm,baselineMyMax(p)):''}</div></div><div class="explain"><b>VALUE</b> resta stabile: è il valore tecnico demo.<br><b>MARKET</b> reagisce ai prezzi realmente pagati e alla liquidità della lega.<br><b>MY MAX</b> reagisce a budget, slot e sovra/sottospesa della tua strategia.<div class="engine-line"><span>Pressione mercato ${p.role}</span><b>${press>=1?'+':''}${Math.round((press-1)*100)}%</b></div><div class="engine-line"><span>Salute budget ${p.role}</span><b>${Math.round(health*100)}%</b></div><div class="engine-line"><span>Budget ${p.role} residuo</span><b>${Math.round(rr)} / ${Math.round(rb)}</b></div></div><div class="auction-form"><div><label>Acquirente</label><select id="buyer">${teams().map(t=>`<option>${t}</option>`).join('')}</select></div><div><label>Prezzo finale</label><input id="salePrice" type="number" min="${S.minBid}" value="${mk}"></div><button class="btn primary" id="buyBtn">Registra acquisto</button></div></div>`;
-  $('#buyBtn').onclick=()=>{
-    const b=$('#buyer').value,pr=Math.max(S.minBid,+$('#salePrice').value||S.minBid);
-    if(pr>rem(b))return alert(`Budget insufficiente: ${b} ha ${rem(b)} crediti.`);
-    if(roleSlots(b,p.role)<=0)return alert(`${b} non ha più slot ${p.role}.`);
-    S.purchases.push({playerId:p.id,buyer:b,price:pr,marketAtSale:mk,baseAtSale:baseMarket(p),ts:Date.now()});
+  const host=$('#auctionPanel');
+  if(!sel){host.innerHTML='<div class="empty">Seleziona un giocatore dal listone.</div>';return}
+  const p=P.find(x=>x.id===sel),sold=pur(sel);
+  if(sold){
+    host.innerHTML=`<div class="auction-card"><div class="auction-player"><div class="role-dot role-${p.role}">${p.role}</div><div><h4>${p.name}</h4><p>${p.team} · ${p.role}</p></div></div><div class="explain">Assegnato a <b>${teamName(sold.buyerId)}</b> per <b>${sold.price}</b> crediti.</div></div>`;
+    return;
+  }
+  const mk=market(p),mm=mymax(p),alloc=dynamicAllocations(0),base=baselineRoleRemaining(0,p.role);
+  const canBuy=p.role===S.phase;
+  host.innerHTML=`<div class="auction-card">
+    <div class="auction-player"><div class="role-dot role-${p.role}">${p.role}</div><div><h4>${p.name}</h4><p>${p.team} · ruolo ${p.role}</p></div></div>
+    <div class="price-grid"><div class="price-box"><span>VALUE</span><strong>${val(p).toFixed(1)}</strong></div><div class="price-box market"><span>MARKET</span><strong>${mk}</strong></div><div class="price-box max"><span>MY MAX</span><strong>${openRole(p.role)?mm:'—'}</strong></div></div>
+    <div class="explain">
+      Ogni acquisto della tua squadra ridistribuisce immediatamente il budget su tutti i reparti ancora aperti.
+      <div class="engine-line"><span>Fase</span><b>${S.phase}</b></div>
+      <div class="engine-line"><span>Piano residuo ${p.role}</span><b>${Math.round(base)}</b></div>
+      <div class="engine-line"><span>Budget dinamico ${p.role}</span><b>${Math.round(alloc[p.role]||0)}</b></div>
+    </div>
+    ${canBuy?`<div class="auction-form">
+      <div><label>Acquirente</label><select id="buyer">${teamIds().map(id=>`<option value="${id}">${teamName(id)}</option>`).join('')}</select></div>
+      <div><label>Prezzo finale</label><input id="salePrice" type="number" min="${S.minBid}" value="${mk}"></div>
+      <button class="btn primary" id="buyBtn">Registra acquisto</button>
+    </div>`:`<div class="explain">Siamo nella fase <b>${S.phase}</b>: gli acquisti registrabili ora sono quelli del ruolo ${S.phase}.</div>`}
+  </div>`;
+  if(canBuy)$('#buyBtn').onclick=()=>{
+    const buyerId=Number($('#buyer').value),price=Math.max(S.minBid,Number($('#salePrice').value)||S.minBid);
+    if(price>rem(buyerId))return alert(`Budget insufficiente: ${teamName(buyerId)} ha ${rem(buyerId)} crediti.`);
+    if(roleSlots(buyerId,p.role)<=0)return alert(`${teamName(buyerId)} non ha più slot ${p.role}.`);
+    S.purchases.push({playerId:p.id,buyerId,price,marketAtSale:mk,baseAtSale:baseMarket(p),phase:S.phase,ts:Date.now()});
     save();renderDynamic();
   };
 }
-function renderLeague(){$('#leagueBody').innerHTML=teams().map(t=>`<tr><td class="${t===S.myTeamName?'mine':''}">${t}</td><td>${rem(t)}</td><td>${tp(t).length}/${slotsTotal()}</td></tr>`).join('')}
-function renderDynamic(){renderK();renderPlayers();renderAuction();renderLeague()}
+function renderLeague(){
+  $('#leagueBody').innerHTML=teamIds().map(id=>`<tr><td class="${id===0?'mine':''}">${teamName(id)}</td><td>${rem(id)}</td><td>${tp(id).length}/${slotsTotal()}</td></tr>`).join('');
+}
+function renderAllocation(){
+  const dyn=dynamicAllocations(0);
+  $('#phaseLabel').textContent=`fase ${S.phase}`;
+  $('#allocationRows').innerHTML=ROLES.map(r=>{
+    const closed=!openRole(r),base=baselineRoleRemaining(0,r),now=dyn[r]||0,delta=Math.round(now-base);
+    return `<div class="allocation-row ${closed?'closed':''}">
+      <strong class="role-${r}">${r}</strong>
+      <span>${closed?'—':Math.round(base)}</span>
+      <span class="dyn">${closed?'CHIUSO':Math.round(now)}</span>
+      <span class="${delta<0?'neg':delta>0?'pos':''}">${closed?'—':`${delta>0?'+':''}${delta}`}</span>
+    </div>`;
+  }).join('');
+}
+function renderDynamic(){renderK();renderPlayers();renderAuction();renderLeague();renderAllocation()}
 function renderAll(){renderSettings();renderDynamic()}
+
 function bind(){
-  $('#myTeamName').onchange=e=>{
-    const old=S.myTeamName,n=e.target.value.trim()||'La mia squadra';
-    S.purchases=S.purchases.map(p=>p.buyer===old?{...p,buyer:n}:p);S.myTeamName=n;e.target.value=n;save();renderDynamic();
+  $('#credits').oninput=e=>{
+    const v=Number(e.target.value);
+    if(Number.isFinite(v)&&v>=1){S.credits=v;save();updateBudgetSum();renderDynamic()}
   };
-  $('#credits').oninput=e=>{const v=Number(e.target.value);if(Number.isFinite(v)&&v>=1){S.credits=v;save();renderDynamic()}};
-  $('#credits').onchange=e=>{const v=Math.max(50,Number(e.target.value)||500);S.credits=v;e.target.value=v;save();renderDynamic()};
-  $('#teams').oninput=e=>{const v=Number(e.target.value);if(Number.isFinite(v)&&v>=1){S.teams=clamp(Math.round(v),4,20);save();renderDynamic()}};
-  $('#teams').onchange=e=>{S.teams=clamp(Math.round(Number(e.target.value)||10),4,20);e.target.value=S.teams;const valid=new Set(teams());S.purchases=S.purchases.filter(p=>valid.has(p.buyer));save();renderDynamic()};
-  $('#minBid').oninput=e=>{const v=Number(e.target.value);if(Number.isFinite(v)&&v>=1){S.minBid=Math.round(v);save();renderDynamic()}};
-  for(const r of 'PDCA'){
-    $('#slots'+r).oninput=e=>{const v=Number(e.target.value);if(Number.isFinite(v)&&v>=0){S.slots[r]=Math.round(v);save();renderDynamic()}};
-    const R=$('#b'+r.toLowerCase()+'R'),N=$('#b'+r.toLowerCase()+'N');
-    R.oninput=e=>{S.budget[r]=clamp(Number(e.target.value)||1,1,80);N.value=S.budget[r];updateBudgetSum();save();renderDynamic()};
-    N.oninput=e=>{const v=Number(e.target.value);if(Number.isFinite(v)&&v>=1){S.budget[r]=clamp(v,1,80);R.value=S.budget[r];updateBudgetSum();save();renderDynamic()}};
+  $('#teams').onchange=e=>{
+    const old=S.teams,next=clamp(Math.round(Number(e.target.value)||old),4,20);
+    if(next<old&&S.purchases.some(p=>Number(p.buyerId)>=next)){
+      alert('Prima annulla gli acquisti delle squadre che vuoi rimuovere.');
+      e.target.value=old;return;
+    }
+    S.teams=next;ensureTeamNames();e.target.value=next;save();renderTeamEditors();renderDynamic();
+  };
+  $('#minBid').oninput=e=>{
+    const v=Number(e.target.value);if(Number.isFinite(v)&&v>=1){S.minBid=Math.round(v);save();renderDynamic()}
+  };
+  for(const r of ROLES){
+    $('#slots'+r).oninput=e=>{
+      const v=Number(e.target.value);if(Number.isFinite(v)&&v>=0){S.slots[r]=Math.round(v);save();renderDynamic()}
+    };
+    $('#budget'+r).oninput=e=>{
+      const v=Number(e.target.value);if(Number.isFinite(v)&&v>=0){S.budget[r]=v;save();updateBudgetSum();renderDynamic()}
+    };
   }
+  $$('#phaseSelect button').forEach(b=>b.onclick=()=>{
+    S.phase=b.dataset.phase;save();
+    $$('#phaseSelect button').forEach(x=>x.classList.toggle('active',x.dataset.phase===S.phase));
+    renderDynamic();
+  });
   $('#search').oninput=e=>{q=e.target.value;renderPlayers()};
-  $$('#roleFilter button').forEach(b=>b.onclick=()=>{role=b.dataset.role;$$('#roleFilter button').forEach(x=>x.classList.toggle('active',x===b));renderPlayers()});
+  $$('#roleFilter button').forEach(b=>b.onclick=()=>{
+    role=b.dataset.role;$$('#roleFilter button').forEach(x=>x.classList.toggle('active',x===b));renderPlayers()
+  });
   $('#undoBtn').onclick=()=>{S.purchases.pop();save();renderDynamic()};
-  $('#resetBtn').onclick=()=>{if(confirm('Azzerare tutti gli acquisti?')){S.purchases=[];sel=null;save();renderDynamic()}};
+  $('#resetBtn').onclick=()=>{
+    if(confirm('Azzerare tutti gli acquisti?')){S.purchases=[];sel=null;S.phase='P';save();renderAll()}
+  };
 }
 bind();renderAll();
 </script></body></html>
